@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<h1>Video Summarizer</h1>
+
+<form action="#" method="POST">
+    <input type="text" id="userInput" name="userInput" placeholder="Enter a YouTube video URL...">
+    <button id="submit" type="submit">Submit</button>
+</form>
+<br>    
+<div id="answer">
+    {{ response }}
+</div>
+
+<p id="footer">Developed by pizzalover125. Powered by Gemini, Flask, YouTube_Transcript_API (pypi), and pyTube (pypi).</p>
+{% endblock %}

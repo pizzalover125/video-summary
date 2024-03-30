@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 11.5px;
+    width: 20%;
+}
+
+input {
+    padding: 10px;
+    width: 30%;
+    border: none;
+    outline: 1px solid black;
+}
+
+#answer {
+    background-color: lightgrey;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+}
