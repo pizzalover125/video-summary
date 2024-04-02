@@ -47,9 +47,9 @@ def main():
         lang = request.form['lang']
         try:
             response = translate_text(videoSummary(user_input), lang)
-            return render_template("index.html", response="tesst")
+            return render_template("index.html", response=response)
         except:
-            return render_template("index.html", response="Error occured. Please try a URL with audio.")
+            return render_template("index.html", response="Invalid URL.")
 
         
     else:

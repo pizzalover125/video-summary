@@ -18,6 +18,7 @@ input {
     border: none;
     outline: 1px solid black;
 }
+
 select {
     padding: 10px;
     width: 31.35%;
@@ -26,14 +27,9 @@ select {
 }
 
 #answer {
-    background-color: lightgrey;
-    width: 60%;
+    background-color: rgb(238, 238, 238);
+    width: 31.55%;
     text-align: center;
     margin: 0 auto;
     border-radius: 10px;
-}
-
-#footer {
-    position: fixed;
-    bottom: 0;
 }
