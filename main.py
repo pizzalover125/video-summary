@@ -23,6 +23,10 @@ def get_description(url):
             continue
     return False
 
+def get_ID(vidURL):
+    vidID = extract.video_id(vidURL)
+    return vidID
+
 def videoSummary(vidURL):
     vidID = extract.video_id(vidURL)
     description = get_description(vidURL)
@@ -45,9 +49,10 @@ def main():
     if request.method == "POST":
         user_input = request.form['userInput']
         lang = request.form['lang']
+
         try:
             response = translate_text(videoSummary(user_input), lang)
-            return render_template("index.html", response=response)
+            return render_template("index.html", response=response, id=get_ID(user_input))
         except:
             return render_template("index.html", response="Invalid URL.")
 
@@ -56,4 +61,4 @@ def main():
         return render_template("index.html")
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

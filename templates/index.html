@@ -27,8 +27,25 @@
 </form>
 <br>    
 <div id="answer">
-    {{ response }}
+    {% if response %}
+        {{ response }}
+        
+    {% else %}
+    <p>Directions: Simply input a valid YouTube video URL into the textbox above. For best results, use a short video with a voice over. Videos longer than 15 minutes may not work due to Gemini's input limits.</p>
+    {% endif %}
+
+
+    <br><br>
+    {% if id %}
+        <iframe frameborder="0" height="235" width="420" id="vid"></iframe>
+    {% endif %}
 </div>
 
 <p id="footer">Developed by pizzalover125. Powered by Gemini.</p>
+<p id="videoID" style="color:white;display:none">{{ id }}</p>
+
+<script>
+    id = document.getElementById("videoID").innerHTML;
+    document.getElementById("vid").src = "https://www.youtube.com/embed/" + id;
+</script>
 {% endblock %}
